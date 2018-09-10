@@ -1,0 +1,94 @@
+@supports (grid-area:auto) {
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* CSS GRID and GRID AREAS*/
+
+.site {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 30px 115px 65px 45px 225px 350px 200px 40px;
+  grid-template-areas:
+    'hd hd hd hd hd'
+    'nv nv nv nv nv'
+    'db db db db db'
+    'ann ann ann ann ann'
+    'tk tk analyt analyt analyt'
+    'rc rc analyt analyt analyt'
+    'card card card card card'
+    'ft ft ft ft ft';
+}
+
+.header {
+  grid-area: hd;
+  background: #eeccdd;
+}
+
+.navbar {
+  grid-area: nv;
+  text-align: center;
+  background-image: url("../img/navbar-bkg.png");
+  background-size: cover;
+  background-position: center;
+  padding-top: 20px;
+}
+
+.dash {
+  grid-area: db;
+  background: #eeffdd;
+}
+
+.announce {
+  grid-area: ann;
+  background: #cceedd;
+}
+
+.tasks {
+  grid-area: tk;
+  background: #eeeeee;
+}
+
+.recommend {
+  grid-area: rc;
+  background: #cccccc;
+}
+
+.analyt {
+  grid-area: analyt;
+  background: #eeeeee;
+}
+
+.cards {
+  grid-area: card;
+  background: #ccddee;
+}
+
+.footer {
+  grid-area: ft;
+  background: #ddeecc;
+}
+
+@media screen and (max-width:767px) {
+  .site {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'hd hd hd hd hd'
+    'nv nv nv nv nv'
+    'db db db db db'
+    'ann ann ann ann ann'
+    'tk tk tk tk tk'
+    'rc rc rc rc rc'
+    'analyt analyt analyt analyt analyt'
+    'card card card card card'
+    'ft ft ft ft ft';
+  }
+
+/* OTHER STYLING */
+
+/* .navicon {
+  margin-right: 100px;
+} */
