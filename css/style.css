@@ -213,6 +213,10 @@
   min-width: 50px;
 }
 
+.announce-flex .buttons img:hover {
+  transform: scale(1.1, 1.1);
+}
+
 .announce-flex .divider {
   height: 100%;
   width: 1px;
