@@ -12,7 +12,7 @@
   display: grid;
   margin: 0;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 40px 115px 65px 45px 225px 350px 200px 40px;
+  grid-template-rows: 40px 115px 90px 45px 225px 350px 200px 40px;
   grid-template-areas:
     'hd hd hd hd hd hd hd'
     'nv nv nv nv nv nv nv'
@@ -93,7 +93,43 @@
 
 .dash {
   grid-area: db;
-  background: #eeffdd;
+  background: #33cc66;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+.dash-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.dash-text {
+  font-family: 'Myriad Pro', sans-serif;
+  color: white;
+  font-size: 30px;
+  margin-left: 20px;
+  padding-top: 5px;
+}
+
+.search {
+  position: relative;
+}
+
+.search input {
+  width: 200px;
+  font-size: 16px;
+  line-height: 28px;
+  border: 1px solid #2db55b;
+  margin-right: 15px;
+  border-radius: 2px;
+}
+
+.search img {
+  position: absolute;
+  right: 30px;
+  top: 5px;
 }
 
 .announce {
