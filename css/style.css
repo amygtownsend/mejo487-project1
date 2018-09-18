@@ -23,7 +23,7 @@ h1, .announce-text, p, h2, .task-name, .task-number, .recommend-category, .recom
   display: grid;
   margin: 0;
   grid-template-columns: 1fr 6fr 1fr;
-  grid-template-rows: 40px 115px 90px 1000px 80px;
+  grid-template-rows: 40px 115px 90px 1210px 80px;
   grid-template-areas:
     'hd hd hd'
     'nv nv nv'
@@ -149,7 +149,7 @@ h1 {
   border-top: 1px solid #eeeeee;
   border-radius: 5px;
   grid-template-columns: 1fr;
-  grid-template-rows: 890px;
+  grid-template-rows: 1100px;
   grid-template-areas:
     'container';
 }
@@ -178,7 +178,7 @@ h1 {
   margin: 0;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, .25);
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 55px 280px 400px 200px;
+  grid-template-rows: 55px 280px 610px 200px;
   grid-template-areas:
     'ann ann ann ann ann'
     'tk tk analyt analyt analyt'
@@ -540,7 +540,8 @@ h3 {
 .contacts-customers {
   display: flex;
   justify-content: space-around;
-  margin: 45px 20px;
+  padding: 45px 20px;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .contacts-graph, .customers-graph {
@@ -600,6 +601,19 @@ h3 {
   font-size: 11px;
 }
 
+.quote {
+  color: #ffffff;
+  background: #2394ee;
+  border-radius: 5px;
+  margin: 25px;
+  padding: 30px;
+}
+
+.quote h3, .quote p {
+  color: #ffffff;
+  margin: 5px;
+}
+
 .cards {
   grid-area: card;
   background: #2394ee;
@@ -614,7 +628,7 @@ h3 {
 @media screen and (max-width:767px) {
   .container {
     grid-template-columns: 1fr;
-    grid-template-rows: 120px 225px 285px 985px 200px;
+    grid-template-rows: 120px 225px 285px 1235px 200px;
     grid-template-areas:
       'ann'
       'tk'
@@ -624,12 +638,12 @@ h3 {
   }
 
   .main {
-    grid-template-rows: 1770px;
+    grid-template-rows: 2020px;
   }
 
   .site {
     grid-template-columns: 1fr;
-    grid-template-rows: 40px 115px 90px 1780px 80px;
+    grid-template-rows: 40px 115px 90px 2030px 80px;
     grid-template-areas:
     'hd'
     'nv'
@@ -699,7 +713,11 @@ h3 {
   }
 
   .contacts-graph, .customers-graph {
-    margin: 50px auto;
+    margin: 0 auto;
+  }
+
+  .contacts-graph {
+    margin-bottom: 50px;
   }
 }
 
