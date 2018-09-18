@@ -12,7 +12,7 @@
   display: grid;
   margin: 0;
   grid-template-columns: 1fr 6fr 1fr;
-  grid-template-rows: 40px 115px 90px 820px 40px;
+  grid-template-rows: 40px 115px 90px 845px 40px;
   grid-template-areas:
     'hd hd hd'
     'nv nv nv'
@@ -133,14 +133,37 @@
   grid-area: main;
   display: grid;
   margin: 0;
+  padding: 10px;
+  position: relative;
+  background-image: linear-gradient(#f6f6f6, #ffffff, #ffffff, #ffffff);
+  border-top: 1px solid #eeeeee;
+  border-radius: 5px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 45px 225px 350px 200px;
+  grid-template-rows: 50px 225px 350px 200px;
   grid-template-areas:
     'ann ann ann ann ann'
     'tk tk analyt analyt analyt'
     'rc rc analyt analyt analyt'
     'card card card card card'
     'ft ft ft ft ft';
+}
+
+.main::before, .main::after {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(#eeeeee, #ffffff, #ffffff, #ffffff);
+  border-radius: 5px;
+  top: 3px;
+  bottom: -1px;
+  width: 1px;
+}
+
+.main::before {
+  left: -1px;
+}
+
+.main::after {
+  right: -1px;
 }
 
 .announce {
