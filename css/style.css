@@ -23,7 +23,7 @@ h1, .announce-text, p, h2, .task-name, .task-number, .recommend-category, .recom
   display: grid;
   margin: 0;
   grid-template-columns: 1fr 6fr 1fr;
-  grid-template-rows: 40px 115px 90px 950px 40px;
+  grid-template-rows: 40px 115px 90px 1000px 80px;
   grid-template-areas:
     'hd hd hd'
     'nv nv nv'
@@ -149,7 +149,7 @@ h1 {
   border-top: 1px solid #eeeeee;
   border-radius: 5px;
   grid-template-columns: 1fr;
-  grid-template-rows: 830px;
+  grid-template-rows: 890px;
   grid-template-areas:
     'container';
 }
@@ -602,7 +602,8 @@ h3 {
 
 .cards {
   grid-area: card;
-  background: #ccddee;
+  background: #2394ee;
+  margin-bottom: 45px;
 }
 
 .footer {
@@ -613,7 +614,7 @@ h3 {
 @media screen and (max-width:767px) {
   .container {
     grid-template-columns: 1fr;
-    grid-template-rows: 120px 225px 225px 350px 200px;
+    grid-template-rows: 120px 225px 285px 985px 200px;
     grid-template-areas:
       'ann'
       'tk'
@@ -622,9 +623,13 @@ h3 {
       'card';
   }
 
+  .main {
+    grid-template-rows: 1770px;
+  }
+
   .site {
     grid-template-columns: 1fr;
-    grid-template-rows: 40px 115px 90px 1140px 40px;
+    grid-template-rows: 40px 115px 90px 1780px 80px;
     grid-template-areas:
     'hd'
     'nv'
@@ -670,6 +675,31 @@ h3 {
     display: block;
     margin: 5px auto;
     text-align: center;
+  }
+
+  .analyt-flex {
+    display: block;
+  }
+
+  .pies {
+    display: flex;
+    justify-content: center;
+  }
+
+  .pies img {
+    margin-right: 15px;
+  }
+
+  .analyt .graph {
+    border: none;
+  }
+
+  .contacts-customers {
+    display: block;
+  }
+
+  .contacts-graph, .customers-graph {
+    margin: 50px auto;
   }
 }
 
