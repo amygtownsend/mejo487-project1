@@ -8,7 +8,7 @@
 
 /* GENERAL STYLING */
 
-h1, .announce-text, p, h2, .task-name, .task-number, .recommend-category, .recommend-title, h3, .selected, .selector-options a, .checkbox {
+h1, .announce-text, p, h2, .task-name, .task-number, .recommend-category, .recommend-title, h3, .selected, .selector-options a, .checkbox, .banner-title, .banner-subtitle {
   font-family: 'Myriad Pro', sans-serif;
   font-weight: 400;
 }
@@ -23,7 +23,7 @@ h1, .announce-text, p, h2, .task-name, .task-number, .recommend-category, .recom
   display: grid;
   margin: 0;
   grid-template-columns: 1fr 6fr 1fr;
-  grid-template-rows: 40px 115px 90px 900px 40px;
+  grid-template-rows: 40px 115px 90px 950px 40px;
   grid-template-areas:
     'hd hd hd'
     'nv nv nv'
@@ -178,7 +178,7 @@ h1 {
   margin: 0;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, .25);
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 55px 280px 350px 200px;
+  grid-template-rows: 55px 280px 400px 200px;
   grid-template-areas:
     'ann ann ann ann ann'
     'tk tk analyt analyt analyt'
@@ -461,7 +461,8 @@ h3 {
 
 .checks {
   text-align: center;
-  margin-top: 25px;
+  padding: 25px 0;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .checkbox {
@@ -534,6 +535,69 @@ h3 {
 
 .goog .checkbox-text {
   background-color: #31cc66;
+}
+
+.contacts-customers {
+  display: flex;
+  justify-content: space-around;
+  margin: 45px 20px;
+}
+
+.contacts-graph, .customers-graph {
+  position: relative;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, .25);
+}
+
+.customer-icon {
+  display: block;
+  margin: 0 auto;
+  left: 50%;
+  margin-left: -39px;
+  position: absolute;
+  top: -25px;
+  z-index: 0;
+}
+
+.banner {
+  display: flex;
+  position: absolute;
+  margin-top: 25px;
+  align-items: center;
+  justify-content: center;
+  background: #2394ee;
+  height: 60px;
+  width: 100%;
+  left: 50%;
+  margin-left: -99px;
+  top: 15px;
+  z-index: 1;
+}
+
+.chart-icon {
+  display: block;
+  padding-top: 105px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.banner .title, .banner .subtitle {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.banner .title {
+  font-size: 21px;
+  padding-top: 2px;
+}
+
+.banner .subtitle {
+  font-size: 11px;
 }
 
 .cards {
