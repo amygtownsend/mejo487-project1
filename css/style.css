@@ -61,7 +61,7 @@
 .analyt {
   grid-area: analyt;
   background: #eeeeee;
-}
+};
 
 .cards {
   grid-area: card;
@@ -74,12 +74,15 @@
 }
 
 .navicon {
+  display: inline-block;
+  width: 62px;
   margin-right: 10px;
-  overflow: visible;
 }
 
-.navicon::after {
-  content: url("../img/navbar-icon-shadow.png");
+.navicon img {
+  display: block;
+  padding-top: 15px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width:767px) {
@@ -98,7 +101,7 @@
   }
 
   .navicon {
-    margin-right: 5px;
+    margin-right: 0px;
   }
 }
 
