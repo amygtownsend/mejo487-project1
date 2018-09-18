@@ -10,22 +10,23 @@
 
 .site {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin: 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 30px 115px 65px 45px 225px 350px 200px 40px;
   grid-template-areas:
-    'hd hd hd hd hd'
-    'nv nv nv nv nv'
-    'db db db db db'
-    'ann ann ann ann ann'
-    'tk tk analyt analyt analyt'
-    'rc rc analyt analyt analyt'
-    'card card card card card'
-    'ft ft ft ft ft';
+    'hd hd hd hd hd hd hd'
+    'nv nv nv nv nv nv nv'
+    'ec1 db db db db db ec2'
+    'ec1 ann ann ann ann ann ec2'
+    'ec1 tk tk analyt analyt analyt ec2'
+    'ec1 rc rc analyt analyt analyt ec2'
+    'ec1 card card card card card ec2'
+    'ft ft ft ft ft ft ft';
 }
 
 .header {
   grid-area: hd;
-  background: #eeccdd;
+  background-image: linear-gradient(#2498f4, #1d85d8);
 }
 
 .navbar {
@@ -72,23 +73,33 @@
   background: #ddeecc;
 }
 
+.navicon {
+  margin-right: 10px;
+  overflow: visible;
+}
+
+.navicon::after {
+  content: url("../img/navbar-icon-shadow.png");
+}
+
 @media screen and (max-width:767px) {
   .site {
     grid-template-columns: 1fr;
     grid-template-areas:
-    'hd hd hd hd hd'
-    'nv nv nv nv nv'
-    'db db db db db'
-    'ann ann ann ann ann'
-    'tk tk tk tk tk'
-    'rc rc rc rc rc'
-    'analyt analyt analyt analyt analyt'
-    'card card card card card'
-    'ft ft ft ft ft';
+    'hd'
+    'nv'
+    'db'
+    'ann'
+    'tk'
+    'rc'
+    'analyt'
+    'card'
+    'ft';
   }
 
-/* OTHER STYLING */
+  .navicon {
+    margin-right: 5px;
+  }
+}
 
-/* .navicon {
-  margin-right: 100px;
-} */
+/* OTHER STYLING */
