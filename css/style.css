@@ -61,7 +61,7 @@
 .analyt {
   grid-area: analyt;
   background: #eeeeee;
-};
+}
 
 .cards {
   grid-area: card;
