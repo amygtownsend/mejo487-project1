@@ -6,11 +6,15 @@
   box-sizing: border-box;
 }
 
-/* FONTS */
+/* GENERAL STYLING */
 
-h1, .announce-text, p, h2, .task-name, .task-number {
+h1, .announce-text, p, h2, .task-name, .task-number, .recommend-category, .recommend-title {
   font-family: 'Myriad Pro', sans-serif;
   font-weight: 400;
+}
+
+.announce, .tasks, .recommend, .analyt {
+  background: #ffffff;
 }
 
 /* CSS GRID and GRID AREAS*/
@@ -184,7 +188,6 @@ h1 {
 
 .announce {
   grid-area: ann;
-  background: #ffffff;
 }
 
 .announce-flex {
@@ -226,7 +229,6 @@ h1 {
 
 .tasks {
   grid-area: tk;
-  background: #ffffff;
   border-top: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   padding: 20px 0;
@@ -268,7 +270,7 @@ h2 {
   text-align: center;
   padding: 2px 0;
   font-size: 18px;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 .task-item:hover .task-number{
@@ -315,7 +317,41 @@ h2 {
 
 .recommend {
   grid-area: rc;
-  background: #cccccc;
+  padding: 15px;
+  border-top: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+
+.recommend h2 {
+  margin: 10px 5px;
+}
+
+.recommend-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+.recommend-item+.recommend-item {
+  border-top: 1px dotted #eeeeee;
+}
+
+.recommend-icon {
+  min-width: 20px;
+  margin-right: 18px;
+  margin-left: 7px;
+}
+
+.recommend-category, .recommend-title {
+  color: #777777;
+}
+
+.recommend-category {
+  font-size: 10px;
+}
+
+.recommend-title {
+  font-size: 16px;
 }
 
 .analyt {
