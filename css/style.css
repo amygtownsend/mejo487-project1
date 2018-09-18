@@ -182,4 +182,8 @@
   }
 }
 
-/* OTHER STYLING */
+/* POINTER CURSOR */
+
+.navicon:hover, .header-flex-item:hover {
+  cursor: pointer;
+}
