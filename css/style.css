@@ -8,7 +8,7 @@
 
 /* GENERAL STYLING */
 
-h1, .announce-text, p, h2, .task-name, .task-number, .recommend-category, .recommend-title {
+h1, .announce-text, p, h2, .task-name, .task-number, .recommend-category, .recommend-title, h3, .selected, .selector-options a {
   font-family: 'Myriad Pro', sans-serif;
   font-weight: 400;
 }
@@ -360,7 +360,103 @@ h2 {
 
 .analyt {
   grid-area: analyt;
-  background: #eeeeee;
+  border-top: 1px solid #eeeeee;
+}
+
+.analyt-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.analyt h2 {
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+h3 {
+  text-transform: uppercase;
+  color: #999999;
+  font-size: 13px;
+
+}
+
+.graph h3 {
+  margin-left: 35px;
+  display: inline-block;
+}
+
+.graph {
+  padding-right: 25px;
+  border-width: 3px 3px 3px 0;
+  border-style: solid;
+  border-image: linear-gradient(to right, rgba(0, 0, 0, .07), rgba(0, 0, 0, 0)) 1 100%;
+}
+
+.graph img {
+  padding: 10px 0;
+  padding-left: 20px;
+  width: 100%;
+}
+
+.pies {
+  text-align: left;
+  padding-right: 25px;
+  padding-left: 20px;
+}
+
+.pies h3 {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.analyt-flex-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selector {
+  position: relative;
+  display: inline-block;
+}
+
+.selected, .selector-options a {
+  color: #666666;
+  font-size: 13px;
+}
+
+.selected {
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  padding: 8px 10px;
+}
+
+.selected::after {
+  content: url("../img/analytics-selector-arrow.png");
+  padding-left: 15px;
+}
+
+.selector-options {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.selector-options a {
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.selector-options a:hover {
+  color: #2498f4;
+}
+
+.selector:hover .selector-options {
+    display: block;
 }
 
 .cards {
@@ -438,6 +534,6 @@ h2 {
 
 /* POINTER CURSOR */
 
-.navicon:hover, .header-flex-item:hover, .task-item:hover, .recommend-item:hover {
+.navicon:hover, .header-flex-item:hover, .announce-flex .buttons img:hover, .task-item:hover, .recommend-item:hover {
   cursor: pointer;
 }
