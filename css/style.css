@@ -271,6 +271,18 @@ h2 {
   margin-right: 15px;
 }
 
+.task-item:hover .task-number{
+  background: #cccccc;
+}
+
+.task-item:hover .task-name, .task-item:hover .people-count {
+  color: #cccccc;
+}
+
+.task-item:hover .people-count{
+  border: 1px solid #cccccc;
+}
+
 .task-name, .people-count {
   display: inline-block;
   color: #2498f4;
@@ -386,6 +398,6 @@ h2 {
 
 /* POINTER CURSOR */
 
-.navicon:hover, .header-flex-item:hover {
+.navicon:hover, .header-flex-item:hover, .task-item:hover {
   cursor: pointer;
 }
