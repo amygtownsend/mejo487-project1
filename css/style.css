@@ -336,6 +336,10 @@ h2 {
   border-top: 1px dotted #eeeeee;
 }
 
+.recommend-item:hover .recommend-category, .recommend-item:hover .recommend-title {
+  color: #000000;
+}
+
 .recommend-icon {
   min-width: 20px;
   margin-right: 18px;
@@ -434,6 +438,6 @@ h2 {
 
 /* POINTER CURSOR */
 
-.navicon:hover, .header-flex-item:hover, .task-item:hover {
+.navicon:hover, .header-flex-item:hover, .task-item:hover, .recommend-item:hover {
   cursor: pointer;
 }
