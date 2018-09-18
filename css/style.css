@@ -8,7 +8,7 @@
 
 /* GENERAL STYLING */
 
-h1, .announce-text, p, h2, .task-name, .task-number, .recommend-category, .recommend-title, h3, .selected, .selector-options a {
+h1, .announce-text, p, h2, .task-name, .task-number, .recommend-category, .recommend-title, h3, .selected, .selector-options a, .checkbox {
   font-family: 'Myriad Pro', sans-serif;
   font-weight: 400;
 }
@@ -456,7 +456,84 @@ h3 {
 }
 
 .selector:hover .selector-options {
-    display: block;
+  display: block;
+}
+
+.checks {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.checkbox {
+  display: inline-block;
+  margin-left: 10px;
+  padding-left: 23px;
+  color: white;
+  font-size: 12px;
+  position: relative;
+  margin-bottom: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 2px;
+  height: 13px;
+  width: 13px;
+  background-color: #dddddd;
+}
+
+.checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.checkbox input:checked ~ .checkmark {
+  background-color: transparent;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox .checkmark:after {
+  content: url("../img/analytics-icon-check.png");
+}
+
+.checkbox-text {
+  border-radius: 4px;
+  padding: 2px 6px 1px 6px;
+}
+
+.fb .checkbox-text {
+  background-color: #114570;
+}
+
+.twitter .checkbox-text {
+  background-color: #2298f4;
+}
+
+.foursq .checkbox-text {
+  background-color: #3a599b;
+}
+
+.goog .checkbox-text {
+  background-color: #31cc66;
 }
 
 .cards {
@@ -534,6 +611,6 @@ h3 {
 
 /* POINTER CURSOR */
 
-.navicon:hover, .header-flex-item:hover, .announce-flex .buttons img:hover, .task-item:hover, .recommend-item:hover {
+.navicon:hover, .header-flex-item:hover, .announce-flex .buttons img:hover, .task-item:hover, .recommend-item:hover, .selected::after, .checkbox, .checkbox input{
   cursor: pointer;
 }
