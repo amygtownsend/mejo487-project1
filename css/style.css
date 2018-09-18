@@ -6,6 +6,12 @@
   box-sizing: border-box;
 }
 
+/* FONTS */
+
+.dash-text, .announce-text, p {
+  font-family: 'Myriad Pro', sans-serif;
+}
+
 /* CSS GRID and GRID AREAS*/
 
 .site {
@@ -103,7 +109,6 @@
 }
 
 .dash-text {
-  font-family: 'Myriad Pro', sans-serif;
   color: white;
   font-size: 30px;
   margin-left: 20px;
@@ -138,14 +143,10 @@
   background-image: linear-gradient(#f6f6f6, #ffffff, #ffffff, #ffffff);
   border-top: 1px solid #eeeeee;
   border-radius: 5px;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 50px 225px 350px 200px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 825px;
   grid-template-areas:
-    'ann ann ann ann ann'
-    'tk tk analyt analyt analyt'
-    'rc rc analyt analyt analyt'
-    'card card card card card'
-    'ft ft ft ft ft';
+    'container';
 }
 
 .main::before, .main::after {
@@ -166,9 +167,29 @@
   right: -1px;
 }
 
+.container {
+  grid-area: container;
+  display: grid;
+  margin: 0;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, .25);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50px 225px 350px 200px;
+  grid-template-areas:
+    'ann ann ann ann ann'
+    'tk tk analyt analyt analyt'
+    'rc rc analyt analyt analyt'
+    'card card card card card'
+    'ft ft ft ft ft';
+}
+
 .announce {
   grid-area: ann;
-  background: #cceedd;
+  background: #ffffff;
+}
+
+.announce-text {
+  text-transform: uppercase;
+  color: #fe7f13;
 }
 
 .tasks {
