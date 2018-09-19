@@ -8,9 +8,13 @@
 
 /* GENERAL STYLING */
 
-h1, .announce-text, p, h2, .task-name, .task-number, .recommend-category, .recommend-title, h3, .selected, .selector-options a, .checkbox, .banner-title, .banner-subtitle, .card1, .card2, .card3 {
+h1, .announce-text, p, h2, .task-name, .task-number, .recommend-category, .recommend-title, h3, .selected, .selector-options a, .checkbox, .banner > *, .image-card {
   font-family: 'Myriad Pro', sans-serif;
   font-weight: 400;
+}
+
+.header-text, .footer {
+  font-family: 'Proxima Nova', sans-serif;
 }
 
 .announce, .tasks, .recommend, .analyt {
@@ -23,7 +27,7 @@ h1, .announce-text, p, h2, .task-name, .task-number, .recommend-category, .recom
   display: grid;
   margin: 0;
   grid-template-columns: 1fr 6fr 1fr;
-  grid-template-rows: 40px 115px 90px 1260px 80px;
+  grid-template-rows: 40px 115px 90px 1260px 60px;
   grid-template-areas:
     'hd hd hd'
     'nv nv nv'
@@ -40,7 +44,6 @@ h1, .announce-text, p, h2, .task-name, .task-number, .recommend-category, .recom
 
 .header-text {
   color: white;
-  font-family: 'Proxima Nova', sans-serif;
   font-weight: bold;
   font-size: 13px;
   padding-top: 2px;
@@ -620,12 +623,13 @@ h3 {
   align-items: center;
   justify-content: space-around;
   background: #2394ee;
-  margin-bottom: 45px;
+  margin-bottom: 25px;
   padding: 25px;
 }
 
 .image-card {
   background: #ffffff;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, .25);
   position: relative;
   display: flex;
   align-items: center;
@@ -717,7 +721,27 @@ h3 {
 
 .footer {
   grid-area: ft;
-  background: #ddeecc;
+  background-image: url("../img/footer-bkg.png");
+  background-size: cover;
+  color: #777777;
+  display: flex;
+  padding: 25px 100px;
+  justify-content: space-around;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.links > div {
+  margin: 0 15px;
+}
+
+.footer a {
+  color: #2498f2;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 @media screen and (max-width:767px) {
