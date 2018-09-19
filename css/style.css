@@ -8,7 +8,7 @@
 
 /* GENERAL STYLING */
 
-h1, .announce-text, p, h2, .task-name, .task-number, .recommend-category, .recommend-title, h3, .selected, .selector-options a, .checkbox, .banner-title, .banner-subtitle {
+h1, .announce-text, p, h2, .task-name, .task-number, .recommend-category, .recommend-title, h3, .selected, .selector-options a, .checkbox, .banner-title, .banner-subtitle, .card1, .card2, .card3 {
   font-family: 'Myriad Pro', sans-serif;
   font-weight: 400;
 }
@@ -23,7 +23,7 @@ h1, .announce-text, p, h2, .task-name, .task-number, .recommend-category, .recom
   display: grid;
   margin: 0;
   grid-template-columns: 1fr 6fr 1fr;
-  grid-template-rows: 40px 115px 90px 1210px 80px;
+  grid-template-rows: 40px 115px 90px 1260px 80px;
   grid-template-areas:
     'hd hd hd'
     'nv nv nv'
@@ -149,7 +149,7 @@ h1 {
   border-top: 1px solid #eeeeee;
   border-radius: 5px;
   grid-template-columns: 1fr;
-  grid-template-rows: 1100px;
+  grid-template-rows: 1150px;
   grid-template-areas:
     'container';
 }
@@ -178,7 +178,7 @@ h1 {
   margin: 0;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, .25);
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 55px 280px 610px 200px;
+  grid-template-rows: 55px 280px 610px 250px;
   grid-template-areas:
     'ann ann ann ann ann'
     'tk tk analyt analyt analyt'
@@ -616,8 +616,105 @@ h3 {
 
 .cards {
   grid-area: card;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   background: #2394ee;
   margin-bottom: 45px;
+  padding: 25px;
+}
+
+.image-card {
+  background: #ffffff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 160px;
+  width: 31%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.image-card img {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.card1 {
+  flex-direction: row-reverse;
+}
+
+.card1 img {
+  height: 95%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.card1-text {
+  z-index: 1;
+  text-align: right;
+  padding-right: 20px;
+  background: #ffffff;
+}
+
+.card1-text1 {
+  color: #33cc66;
+  font-size: 20px;
+  line-height: 20px;
+  padding-top: 5px;
+  padding-left: 40%;
+  margin-bottom: 5px;
+}
+
+.card1-text2 {
+  color: #666666;
+  font-size: 14px;
+}
+
+.card2 {
+  overflow: visible;
+  justify-content: center;
+}
+
+.card2 img {
+  width: 96%;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: -10px;
+}
+
+.card2-text {
+  background: #33cc66;
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  text-align: center;
+  z-index: 1;
+  padding: 5px;
+  padding-top: 7px;
+  border-radius: 5px;
+}
+
+.card3 img {
+  position: absolute;
+  right: 0;
+}
+
+.card3-text {
+  color: #fe7f13;
+  background: #ffffff;
+  font-size: 20px;
+  padding-right: 30%;
+  padding-left: 20px;
+  line-height: 20px;
 }
 
 .footer {
@@ -718,6 +815,15 @@ h3 {
 
   .contacts-graph {
     margin-bottom: 50px;
+  }
+
+  .cards {
+    display: block;
+  }
+
+  .image-card {
+    width: 100%;
+    margin-bottom: 25px;
   }
 }
 
