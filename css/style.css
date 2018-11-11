@@ -27,7 +27,7 @@ h1, .announce-text, p, h2, .task-name, .task-number, .recommend-category, .recom
   display: grid;
   margin: 0;
   grid-template-columns: 1fr 6fr 1fr;
-  grid-template-rows: 40px 115px 90px 1260px 60px;
+  grid-template-rows: auto;
   grid-template-areas:
     'hd hd hd'
     'nv nv nv'
@@ -42,6 +42,7 @@ h1, .announce-text, p, h2, .task-name, .task-number, .recommend-category, .recom
   grid-area: hd;
   background-image: linear-gradient(#2498f4, #1d85d8);
   vertical-align: middle;
+  padding: 10px;
 }
 
 .header-text {
@@ -90,6 +91,7 @@ h1, .announce-text, p, h2, .task-name, .task-number, .recommend-category, .recom
   background-size: cover;
   background-position: center;
   padding-top: 20px;
+  padding-bottom: 5px;
 }
 
 .navicon {
@@ -158,7 +160,7 @@ h1 {
   border-top: 1px solid #eeeeee;
   border-radius: 5px;
   grid-template-columns: 1fr;
-  grid-template-rows: 1150px;
+  grid-template-rows: auto;
   grid-template-areas:
     'container';
 }
@@ -189,7 +191,7 @@ h1 {
   margin: 0;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, .25);
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 55px 280px 610px 250px;
+  grid-template-rows: auto;
   grid-template-areas:
     'ann ann ann ann ann'
     'tk tk analyt analyt analyt'
@@ -207,6 +209,8 @@ h1 {
   display: flex;
   align-items: center;
   height: 100%;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 
 .announce-text {
@@ -266,6 +270,7 @@ h2 {
 
 .task-item {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
@@ -565,6 +570,7 @@ h3 {
 
 .contacts-customers {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   padding: 45px 20px;
   border-bottom: 1px solid #eeeeee;
@@ -579,6 +585,10 @@ h3 {
   width: 215px;
   text-align: center;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, .25);
+}
+
+.contacts-graph {
+  margin-bottom: 50px;
 }
 
 .analytics-icon-person-green, .analytics-icon-person-orange {
@@ -651,7 +661,6 @@ h3 {
   align-items: center;
   justify-content: space-around;
   background: #2394ee;
-  margin-bottom: 25px;
   padding: 25px;
 }
 
@@ -682,6 +691,7 @@ h3 {
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 0;
 }
 
 .card1-text {
@@ -737,6 +747,7 @@ h3 {
 .card3 img {
   position: absolute;
   right: 0;
+  z-index: 0;
 }
 
 .card3-text {
@@ -745,6 +756,7 @@ h3 {
   padding-right: 30%;
   padding-left: 20px;
   line-height: 20px;
+  z-index: 1;
 }
 
 /* FOOTER STYLES */
@@ -755,13 +767,16 @@ h3 {
   background-size: cover;
   color: #777777;
   display: flex;
+  flex-wrap: wrap;
   padding: 25px 100px;
+  padding-top: 35px;
   justify-content: space-around;
 }
 
 .links {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .links > div {
@@ -777,7 +792,6 @@ h3 {
 @media screen and (max-width:767px) {
   .container {
     grid-template-columns: 1fr;
-    grid-template-rows: 120px 225px 285px 1235px 200px;
     grid-template-areas:
       'ann'
       'tk'
@@ -786,13 +800,8 @@ h3 {
       'card';
   }
 
-  .main {
-    grid-template-rows: 2020px;
-  }
-
   .site {
     grid-template-columns: 1fr;
-    grid-template-rows: 40px 115px 90px 2030px 80px;
     grid-template-areas:
     'hd'
     'nv'
@@ -876,6 +885,20 @@ h3 {
   .image-card {
     width: 100%;
     margin-bottom: 25px;
+  }
+
+  .card3 {
+    margin-bottom: 0;
+  }
+
+  .footer {
+    padding: 15px;
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  .footer div {
+    padding-bottom: 5px;
   }
 }
 
